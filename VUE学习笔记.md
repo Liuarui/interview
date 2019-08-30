@@ -667,6 +667,20 @@ new Vue({
 
 ### 虚拟dom
 
+虚拟dom不是真正意义上的DOM，而是一个轻量级的JavaScript对象，在状态发生变化时，虚拟dom会进行diff运算，来更新只需要被替换的DOM，而不是全部重绘
+
+VNode主要分为
+
+TextVNode文本节点
+
+ELementVNode普通元素节点
+
+ComponentVNode 组件节点
+
+EmptyVNode 没有内容的注释节点
+
+CloneVNode 克隆节点，可以是以上任意类型的节点，唯一的区别在于isCloned属性为true 
+
 Vue 通过建立一个**虚拟 DOM** 来追踪自己要如何改变真实 DOM。请仔细看这行代码：
 
 ```
